@@ -1,0 +1,32 @@
+.nav {
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    margin: 0 5px;
+    padding: 0 5px;
+}
+
+.nav-item a {
+    color: #0477f1de;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.nav-item a:hover {
+    text-decoration: underline;
+    color: #08509cef;
+}
+
