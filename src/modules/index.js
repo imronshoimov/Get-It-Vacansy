@@ -1,5 +1,7 @@
 const registerRoute = require('./register')
+const loginRoute = require('./login')
 
 module.exports = [
-    registerRoute
+    registerRoute,
+    loginRoute
 ]
