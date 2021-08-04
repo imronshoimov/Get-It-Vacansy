@@ -12,6 +12,7 @@ app.set('views', path.join(__dirname, 'views'))
 
 // third-party and build-in middlewares
 app.use( express.static(path.join(__dirname, 'public')) )
+app.use( express.urlencoded({ extended: true }) )
 
 // routes
 const modules = require('./modules')

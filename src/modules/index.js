@@ -1,9 +1,11 @@
-const registerRoute = require('./register')
-const loginRoute = require('./login')
-const homeRoute = require('./home')
+const registerRouter = require('./register')
+const loginRouter = require('./login')
+const homeRouter = require('./home')
+const mainRouter = require('./main')
 
 module.exports = [
-    registerRoute,
-    loginRoute,
-    homeRoute
+    registerRouter,
+    loginRouter,
+    homeRouter,
+    mainRouter
 ]
