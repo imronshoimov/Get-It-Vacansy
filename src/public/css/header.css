@@ -19,14 +19,26 @@
     padding: 0 5px;
 }
 
-.nav-item a {
+.nav-item .login {
     color: #0477f1de;
     font-size: 20px;
     transition: .5s;
 }
 
-.nav-item a:hover {
+.nav-item .login:hover {
     text-decoration: underline;
     color: #08509cef;
 }
 
+.register {
+    background-color: #0b56a7;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.register:hover {
+    background-color: #0b56a7;
+    opacity: 0.91;
+}

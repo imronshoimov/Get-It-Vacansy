@@ -6,10 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get It Vacation</title>
     <link rel="stylesheet" href="/css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <%- include('header.html', { links: [ 'find job', 'apply job' ]}) %>
-
-    <h1>Home page</h1>
+    
+    <main class="main">
+        <div class="container">
+            <h1 class="visually-hidden">Get It Vacation</h1>
+            <div class="recruite-section">
+                <div class="recruite-content">
+                    <h2 class="main-title">I want hire!</h2>
+                    <p class="main-text">Hiring employee is easy with us!</p>
+                    <a class="main-link" href="/admin/recruite">Hire</a>
+                </div>
+                <div class="recruite-image">
+                    <img src="/images/hire.png" alt="hire">
+                </div>
+            </div>
+            <div class="apply-section">
+                <div class="apply-content">
+                    <h2 class="main-title">I want get a job!</h2>
+                    <p class="main-text">Employing is faster with us!</p>
+                    <a class="main-link" href="/admin/job">Find</a>
+                </div>
+                <div class="apply-image">
+                    <img src="/images/job.png" alt="job">
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
