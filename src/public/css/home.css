@@ -35,7 +35,7 @@ body {
 }
 
 .main .container {
-    margin: 30px auto;
+    margin: 80px auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -88,6 +88,67 @@ body {
 }
 
 .main-link:hover {
+    background-color: #0b56a7;
+    opacity: 0.91;
+}
+
+.jobs {
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    background: rgb(240, 239, 239);
+}
+
+.jobs .container {
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jobs-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.jobs-item {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.jobs-item img {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.jobs-item p {
+    font-size: 25px;
+    margin-top: 20px;
+    font-weight: 540;
+    color: #0b56a7;
+}
+
+.marketing {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.get-start {
+    font-size: 22px;
+    color: white;
+    background-color: #0b56a7;
+    padding: 15px 20px;
+    border-radius: 5px;
+    transition: background .3s;
+}
+
+.get-start:hover {
     background-color: #0b56a7;
     opacity: 0.91;
 }
