@@ -1,3 +1,8 @@
+:root {
+    --bg-color: #00BAFC;
+    --hover-color: #0381af;
+}
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -67,20 +72,18 @@ body {
 
 .main-title {
     font-size: 35px;
-    color: #0b56a7;
     margin-bottom: 10px;
 }
 
 .main-text {
     font-size: 17px;
-    color: #0b56a7;
-    opacity: 0.7;
+    color: rgba(0,0,0,0.5);
     margin-bottom: 30px;
 }
 
 .main-link {
     font-size: 22px;
-    background-color: #0b56a7;
+    background-color: var(--bg-color);
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -88,67 +91,70 @@ body {
 }
 
 .main-link:hover {
-    background-color: #0b56a7;
+    background-color: var(--hover-color);
     opacity: 0.91;
-}
-
-.jobs {
-    border-top: 1px solid lightgray;
-    border-bottom: 1px solid lightgray;
-    background: rgb(240, 239, 239);
 }
 
 .jobs .container {
-    padding: 30px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 50px 0;
 }
 
-.jobs-list {
+.jobs__title {
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+
+.jobs__subtext {
+    text-align: center;
+    width: 60%;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.jobs__list {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
 }
 
-.jobs-item {
-    margin: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.jobs-item img {
-    width: 500px;
-    height: 300px;
-    object-fit: cover;
-}
-
-.jobs-item p {
-    font-size: 25px;
-    margin-top: 20px;
-    font-weight: 540;
-    color: #0b56a7;
-}
-
-.marketing {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.get-start {
-    font-size: 22px;
-    color: white;
-    background-color: #0b56a7;
-    padding: 15px 20px;
+.jobs__item {
+    width: calc(100% / 3 - 7%);
+    margin: 25px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius: 5px;
+    padding: 30px 15px;
+}
+
+.jobs__list__image {
+    width: 60%;
+}
+
+.jobs__list__title {
+    margin: 20px 0;
+}
+
+.jobs__links {
+    margin-top: 30px;
+}
+
+.serves__links {
+    margin-top: 40px;
+}
+
+.booking {
+    background-color: var(--bg-color);
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
     transition: background .3s;
 }
 
-.get-start:hover {
-    background-color: #0b56a7;
-    opacity: 0.91;
+.booking:hover {
+    background-color: var(--hover-color);
 }
