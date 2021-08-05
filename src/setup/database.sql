@@ -28,9 +28,8 @@ CREATE TABLE company(
     company_name varchar(156) not null,
     specialization varchar(32) not null,
     technology text not null,
-    qualification varchar(32) not null,
     experience varchar(12) not null,
-    salary int not null,
+    salary varchar(156) not null,
     type_work varchar(32) not null,
     location varchar(32) not null,
     age smallint not null,
@@ -43,13 +42,11 @@ CREATE TABLE staff(
     user_id int not null references users(user_id)
     specialization varchar(32) not null,
     technology text not null,
-    qualification varchar(32) not null,
     experience varchar(12) not null,
-    salary int not null,
+    qualification varchar(32) not null,
+    salary varchar(156) not null,
     type_work varchar(32) not null,
     location varchar(32) not null,
-    age smallint not null,
-    gender smallint not null,
     number varchar(12) not null
 );
 
@@ -57,5 +54,3 @@ CREATE TABLE stuff_company(
     company_id int not null references company(company_id),
     staff_id int not null references staff(staff_id)
 );
-
-

@@ -1,3 +1,4 @@
+-- insert users
 INSERT INTO users(
     user_first_name,
     user_last_name,
@@ -29,3 +30,26 @@ INSERT INTO users(
 ('Kozim', 'Kizmjonov', 'kozim', crypt('1111', gen_salt('bf')), 3),
 ('Alisher', 'Botirov', 'botir', crypt('1111', gen_salt('bf')), 3),
 ('Samandar', 'Nazirov', 'saman', crypt('1111', gen_salt('bf')), 3);
+
+-- insert company
+INSERT INTO company(
+    user_id,
+    company_name,
+    specialization,
+    technology,
+    experience,
+    salary,
+    type_work,
+    location,
+    number
+) VALUES 
+(1, 'company 1', 'web developer', 'React, NodeJs', '1 yil', '200$-500$', 'doimiy', 'Tashkent', '998903332334'),
+(3, 'company 2', 'graphic designer', 'Adobe Photoshop', '2 yil', '150$-400$', 'doimiy', 'Tashkent', '998994009931'),
+(2, 'company 3', 'web designer', 'UI / UX', '6 oy', '300$+', 'doimiy', 'Tashkent', '998973234567'),
+(1, 'company 1', 'mobile developer', 'Flutter', '2 yil', '600$', 'doimiy', 'Tashkent', '998903332334'),
+(4, 'company 4', 'frontend', 'HTML, CSS, Js, React', '1 yil', '500$', 'doimiy', 'Tashkent', '998903456789'),
+(5, 'company 5', 'frontend', 'HTML, CSS, Js', '1 yil', '400$', 'doimiy', 'Tashkent', '998945623478'),
+(6, 'company 6', 'bot master', 'PHP', '2 yil', '450$', 'doimiy', 'Tashkent', '998941234567'),
+(2, 'company 3', 'marketolog', 'SMM', '1 yildan ko''p', '500$', 'doimiy', 'Tashkent', '998973234567'),
+(4, 'company 4', 'backend', 'NodeJs, Express, PostgreSQL', '2 yil', '800$', 'doimiy', 'Tashkent', '998902345665'),
+(6, 'company 6', 'backend', 'Python', '2 yil', '900$', 'doimiy', 'Tashkent', '998994409921');
