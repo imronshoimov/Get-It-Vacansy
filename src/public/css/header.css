@@ -1,3 +1,8 @@
+:root {
+    --bg-color: #00BAFC;
+    --hover-color: #0381af;
+}
+
 .nav {
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
@@ -20,25 +25,25 @@
 }
 
 .nav-item .login {
-    color: #0477f1de;
+    color: var(--bg-color);
     font-size: 20px;
     transition: .5s;
 }
 
 .nav-item .login:hover {
     text-decoration: underline;
-    color: #08509cef;
+    color: var(--hover-color);
 }
 
 .register {
-    background-color: #0b56a7;
+    background-color: var(--bg-color);
     color: white;
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 5px;
+    transition: background .3s;
 }
 
 .register:hover {
-    background-color: #0b56a7;
-    opacity: 0.91;
+    background-color: var(--hover-color);
 }
