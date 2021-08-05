@@ -1,7 +1,12 @@
 CREATE DATABASE giv;
+CREATE EXTENSION pgcrypto;
 
 /* 
     users
+        root => 1
+        recruiter => 2
+        employee => 3
+
     company
     staff
 */
@@ -12,6 +17,7 @@ CREATE TABLE users(
     user_last_name varchar(32) not null,
     user_username varchar(90) unique,
     user_password varchar(256) not null,
+    user_role smallint not null,
     user_created_at timestamptz default current_timestamp,
 	user_deleted_at timestamptz default null
 );
@@ -51,3 +57,5 @@ CREATE TABLE stuff_company(
     company_id int not null references company(company_id),
     staff_id int not null references staff(staff_id)
 );
+
+
