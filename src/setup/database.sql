@@ -24,22 +24,20 @@ CREATE TABLE users (
 
 CREATE TABLE company (
     company_id serial primary key,
-    user_id int not null references users(user_id)
+    user_id int not null references users(user_id),
     company_name varchar(156) not null,
     specialization varchar(32) not null,
     technology text not null,
-    experience varchar(12) not null,
+    experience varchar(32) not null,
     salary varchar(156) not null,
     type_work varchar(32) not null,
     location varchar(32) not null,
-    age smallint not null,
-    gender smallint not null,
     number varchar(12) not null
 );
 
 CREATE TABLE staff (
     staff_id serial primary key,
-    user_id int not null references users(user_id)
+    user_id int not null references users(user_id),
     specialization varchar(32) not null,
     technology text not null,
     experience varchar(12) not null,
