@@ -11,7 +11,7 @@ CREATE EXTENSION pgcrypto;
     staff
 */
 
-CREATE TABLE users(
+CREATE TABLE users (
     user_id serial primary key,
     user_first_name varchar(32) not null,
     user_last_name varchar(32) not null,
@@ -22,7 +22,7 @@ CREATE TABLE users(
 	user_deleted_at timestamptz default null
 );
 
-CREATE TABLE company(
+CREATE TABLE company (
     company_id serial primary key,
     user_id int not null references users(user_id)
     company_name varchar(156) not null,
@@ -37,7 +37,7 @@ CREATE TABLE company(
     number varchar(12) not null
 );
 
-CREATE TABLE staff(
+CREATE TABLE staff (
     staff_id serial primary key,
     user_id int not null references users(user_id)
     specialization varchar(32) not null,
@@ -47,6 +47,8 @@ CREATE TABLE staff(
     salary varchar(156) not null,
     type_work varchar(32) not null,
     location varchar(32) not null,
+    age smallint not null,
+    gender smallint not null,
     number varchar(12) not null
 );
 

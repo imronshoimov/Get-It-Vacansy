@@ -1,5 +1,5 @@
 -- insert users
-INSERT INTO users(
+INSERT INTO users (
     user_first_name,
     user_last_name,
     user_username,
@@ -32,7 +32,7 @@ INSERT INTO users(
 ('Samandar', 'Nazirov', 'saman', crypt('1111', gen_salt('bf')), 3);
 
 -- insert company
-INSERT INTO company(
+INSERT INTO company (
     user_id,
     company_name,
     specialization,
@@ -53,3 +53,19 @@ INSERT INTO company(
 (2, 'company 3', 'marketolog', 'SMM', '1 yildan ko''p', '500$', 'doimiy', 'Tashkent', '998973234567'),
 (4, 'company 4', 'backend', 'NodeJs, Express, PostgreSQL', '2 yil', '800$', 'doimiy', 'Tashkent', '998902345665'),
 (6, 'company 6', 'backend', 'Python', '2 yil', '900$', 'doimiy', 'Tashkent', '998994409921');
+
+-- insert staff
+INSERT INTO staff (
+    user_id,
+    specialization,
+    technology,
+    experience,
+    qualification,
+    salary,
+    type_work,
+    location,
+    age,
+    gender,
+    number
+) VALUES 
+(''),
