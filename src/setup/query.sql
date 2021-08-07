@@ -9,3 +9,4 @@ FROM company;
 SELECT 
     *
 FROM staff;
+
