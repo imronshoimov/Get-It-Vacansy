@@ -5,15 +5,13 @@ const GET = (req, res) => {
     res.render('register.html')
 }
 
-const POST = (req, res) => {
-    const user = model.insertUser(req.body)
+const POST = async (req, res) => {
+    const user = await model.insertUser(req.body)
     if(user) {
-        res.cookie('token', sign(user), { maxAge: 50000000 })
+        res.cookie('token', sign({user}), { maxAge: 50000000 })
             .redirect('/')
-            .status(200)
     } else {
-        res.status(401)
-            .redirect('/register')
+        res.redirect('/register')
     }
 }
 
