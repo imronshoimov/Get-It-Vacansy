@@ -3,33 +3,33 @@ INSERT INTO users (
     user_first_name,
     user_last_name,
     user_username,
-    user_password,
-    user_role
+    email,
+    user_password
 ) VALUES 
 -- root admin
-('root', 'root', 'root', crypt('root', gen_salt('bf')), 1),
+('root', 'root', 'root', 'user@gmail.com', crypt('root', gen_salt('bf'))),
 -- recruiter
-('Alisher', 'Nazirov', 'nz', crypt('1111', gen_salt('bf')), 2),
-('Ulugbek', 'Valiyev', 'rv', crypt('1111', gen_salt('bf')), 2),
-('Samir', 'Nazarov', 'nazarjon', crypt('1111', gen_salt('bf')), 2),
-('Yunus', 'Yusupov', 'tanqidchi', crypt('1111', gen_salt('bf')), 2),
-('MuhammadJavohir', 'Suratov', 'jewel', crypt('1111', gen_salt('bf')), 2),
-('Muhammad', 'Najimov', 'bigonotation', crypt('1111', gen_salt('bf')), 2),
+('Alisher', 'Nazirov', 'nz', 'user@gmail.com', crypt('1111', gen_salt('bf'))),
+('Ulugbek', 'Valiyev', 'rv', 'user@gmail.com', crypt('1111', gen_salt('bf'))),
+('Samir', 'Nazarov', 'nazarjon', 'user@gmail.com', crypt('1111', gen_salt('bf'))),
+('Yunus', 'Yusupov', 'tanqidchi', 'user@gmail.com', crypt('1111', gen_salt('bf'))),
+('MuhammadJavohir', 'Suratov', 'jewel', 'user@gmail.com', crypt('1111', gen_salt('bf'))),
+('Muhammad', 'Najimov', 'bigonotation', 'user@gmail.com', crypt('1111', gen_salt('bf'))),
 -- emplyee
-('Adham', 'Muzaffarov', 'heaven_8', crypt('1111', gen_salt('bf')), 3), -- 8
-('MuhammadSodiq', 'Xolmuhammedov', 'quddusiy', crypt('1111', gen_salt('bf')), 3), -- 9
-('Imron', 'Shoimov', 'yunusemro', crypt('1111', gen_salt('bf')), 3), -- 10
-('Jahongir', 'Mamanazarov', 'official', crypt('1111', gen_salt('bf')), 3), -- 11
-('Jamoliddin', 'Rixsiyev', 'admin0791', crypt('1111', gen_salt('bf')), 3), -- 12
-('Abduvohid', 'Abdufattoyev', 'abduvohid2005', crypt('1111', gen_salt('bf')), 3), -- 13
-('Abdusamad', 'Abdusamadov', 'abdusamad', crypt('1111', gen_salt('bf')), 3), -- 14
-('Zoir', 'Zoirov', 'zoir', crypt('1111', gen_salt('bf')), 3), -- 15
-('Abduhakim', 'Abduhakimov', 'abduhakim', crypt('1111', gen_salt('bf')), 3), -- 16
-('Jabbor', 'Jabborov', 'jabbor', crypt('1111', gen_salt('bf')), 3), -- 17
-('Azim', 'Azimjonov', 'azim', crypt('1111', gen_salt('bf')), 3), -- 18
-('Kozim', 'Kizmjonov', 'kozim', crypt('1111', gen_salt('bf')), 3), -- 19
-('Alisher', 'Botirov', 'botir', crypt('1111', gen_salt('bf')), 3), -- 20
-('Samandar', 'Nazirov', 'saman', crypt('1111', gen_salt('bf')), 3); -- 21
+('Adham', 'Muzaffarov', 'heaven_8', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 8
+('MuhammadSodiq', 'Xolmuhammedov', 'quddusiy', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 9
+('Imron', 'Shoimov', 'yunusemro', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 10
+('Jahongir', 'Mamanazarov', 'official', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 11
+('Jamoliddin', 'Rixsiyev', 'admin0791', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 12
+('Abduvohid', 'Abdufattoyev', 'abduvohid2005', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 13
+('Abdusamad', 'Abdusamadov', 'abdusamad', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 14
+('Zoir', 'Zoirov', 'zoir', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 15
+('Abduhakim', 'Abduhakimov', 'abduhakim', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 16
+('Jabbor', 'Jabborov', 'jabbor', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 17
+('Azim', 'Azimjonov', 'azim', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 18
+('Kozim', 'Kizmjonov', 'kozim', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 19
+('Alisher', 'Botirov', 'botir', 'user@gmail.com', crypt('1111', gen_salt('bf'))), -- 20
+('Samandar', 'Nazirov', 'saman', 'user@gmail.com', crypt('1111', gen_salt('bf'))); -- 21
 
 -- insert company
 INSERT INTO company (
@@ -43,10 +43,10 @@ INSERT INTO company (
     location,
     number
 ) VALUES 
-(1, 'company 1', 'web developer', 'React, NodeJs', '1 yil', '200$-500$', 'doimiy', 'Tashkent', '998903332334'),
+(2, 'company 1', 'web developer', 'React, NodeJs', '1 yil', '200$-500$', 'doimiy', 'Tashkent', '998903332334'),
 (3, 'company 2', 'graphic designer', 'Adobe Photoshop', '2 yil', '150$-400$', 'doimiy', 'Tashkent', '998994009931'),
 (2, 'company 3', 'web designer', 'UI / UX', '6 oy', '300$+', 'doimiy', 'Tashkent', '998973234567'),
-(1, 'company 1', 'mobile developer', 'Flutter', '2 yil', '600$', 'doimiy', 'Tashkent', '998903332334'),
+(3, 'company 1', 'mobile developer', 'Flutter', '2 yil', '600$', 'doimiy', 'Tashkent', '998903332334'),
 (4, 'company 4', 'frontend', 'HTML, CSS, Js, React', '1 yil', '500$', 'doimiy', 'Tashkent', '998903456789'),
 (5, 'company 5', 'frontend', 'HTML, CSS, Js', '1 yil', '400$', 'doimiy', 'Tashkent', '998945623478'),
 (6, 'company 6', 'bot master', 'PHP', '2 yil', '450$', 'doimiy', 'Tashkent', '998941234567'),

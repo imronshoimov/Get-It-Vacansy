@@ -17,7 +17,7 @@ CREATE TABLE users (
     user_last_name varchar(32) not null,
     user_username varchar(90) unique,
     user_password varchar(256) not null,
-    user_role smallint not null,
+    email varchar(128) not null,
     user_created_at timestamptz default current_timestamp,
 	user_deleted_at timestamptz default null
 );
