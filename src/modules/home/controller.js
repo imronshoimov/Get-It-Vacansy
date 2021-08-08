@@ -17,4 +17,12 @@ const POST_RECRUITE = async (req, res) => {
     }
 }
 
-module.exports = { GET, GET_RECRUITE, POST_RECRUITE }
+const GET_JOB = (req, res) => {
+    res.render('job.html')
+}
+
+const POST_JOB = (req, res) => {
+    console.log(req.body);
+}
+
+module.exports = { GET, GET_RECRUITE, POST_RECRUITE, GET_JOB, POST_JOB }
