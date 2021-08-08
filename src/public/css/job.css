@@ -118,6 +118,10 @@ body {
     border: none;
     outline: none;
     transition: background .3s;
+    height: 50px;
+    align-self: flex-end;
+    margin: 10px 20px;
+    margin-left: auto;
 }
 
 .main .container form button:hover {
