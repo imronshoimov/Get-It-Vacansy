@@ -83,18 +83,17 @@
                     <p>Contact</p>
                     <input type="number" name="number" id="number" required placeholder="Contact" min="12">
                 </label>
-                <label class="radio">
+                <div class="radio">
                     <p>Gender</p>
-                    <span>
-                        <input type="radio" name="gender" value="male" id="gender" required placeholder="Gender">
-                        <p>male</p>
-                    </span>
-                    
-                    <span>
-                        <input type="radio" name="gender" value="female" id="gender" required placeholder="Gender">
-                        <p>female</p>
-                    </span>
-                </label>
+                    <div>
+                        <input type="radio" name="gender" value="male">
+                        <label>male</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="gender" value="female">
+                        <label>female</label>
+                    </div> 
+                </div>
                 <label class="button">
                     <button type="submit">Submit</button>
                 </label>

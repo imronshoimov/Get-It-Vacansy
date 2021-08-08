@@ -94,6 +94,22 @@ body {
     font-size: 16px;
 }
 
+.radio {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 300px;
+    padding: 10px 20px;
+}
+
+.radio p {
+    margin-bottom: 20px;
+}
+
+.radio div {
+    margin: 5px 0;
+}
+
 .main .container form button {
     cursor: pointer;
     margin-top: 30px;
@@ -102,10 +118,6 @@ body {
     border: none;
     outline: none;
     transition: background .3s;
-}
-
-.radio span {
-    display: flex;
 }
 
 .main .container form button:hover {
