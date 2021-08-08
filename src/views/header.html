@@ -7,12 +7,12 @@
             </h1>
         </a>
         <ul class="nav-list">
-            <!-- <% for(let link of links) { %> 
+            <% for(let link of links) { %> 
                 <li class="nav-item">
                     <% let url = link.split(' ')[0] + link.split(' ')[1] %>
-                    <a href="/<%= url %>"><%= link %></a>
+                    <a class="nav-link" href="/<%= url %>"><%= link %></a>
                 </li>
-            <% } %>  -->
+            <% } %> 
             <li class="nav-item">
                 <a class="login" href="/login">Log in</a>
             </li>
