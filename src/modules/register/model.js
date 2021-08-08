@@ -14,7 +14,6 @@ RETURNING *;
 
 const user = async ({ firstName, LastName, userName, email, password  }) => {
     let newUser = await fetch(USER, firstName, LastName, userName, email, password)
-    console.log(newUser);
     return newUser
 }
 

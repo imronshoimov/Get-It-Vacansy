@@ -9,9 +9,9 @@ const GET_RECRUITE = (req, res) => {
 }
 
 const POST_RECRUITE = async (req, res) => {
-    let data = await model.insertRecruiter(req.body);
+    let data = await model.insertRecruiter(req.body, req.cookies.userId);
     if(data) {
-        res.status(200)
+        res.status(200).redirect('/')
     } else {
         res.status(400)
     }

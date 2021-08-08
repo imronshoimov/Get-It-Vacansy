@@ -12,12 +12,14 @@ INSERT INTO company (
     location,
     number
 ) VALUES 
-(2, 'company 1', 'web developer', 'React, NodeJs', '1 yil', '200$-500$', 'doimiy', 'Tashkent', '998903332334'),
+($1, $2, $3, $4, $5, $6, $7, $8, $9)
+RETURNING *;
 `
     
-const insertRecruiter = (data) => {
+const insertRecruiter = (data, userId) => {
     const { companyName, specialization, technology, experience, salary, TypeOfWork, location, number }= data
-    let recruiter = fetch()
+    let recruiter = fetch(COMPANY, userId, companyName, specialization, technology, experience, salary, TypeOfWork, location, number)
+    return recruiter
 }
 
 module.exports = {
