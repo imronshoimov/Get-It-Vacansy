@@ -8,7 +8,13 @@ const insertRecruiter = async (data, userId) => {
 }
 
 const insertStaff = async (data, userId) => {
-    const { specialization, technology, experience, qualification, salary, TypeOfWork, location, age, number, gender, } = data
+    let { specialization, technology, experience, qualification, salary, TypeOfWork, location, age, number, gender, } = data
+
+    if(gender = "male") {
+        gender = 1
+    } else if(gender = "female") {
+        gender = 2
+    }
 
     let staff = await fetch(STAFF, userId, specialization, technology, experience, qualification, salary, TypeOfWork, location, age, gender, number)
     return staff
