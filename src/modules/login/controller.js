@@ -11,7 +11,7 @@ const POST = async (req, res) => {
         res.cookie('token', sign(user), { maxAge: 50000000 })
             .redirect('/')
     } else {
-        res.status(401).render({ error: 'wrong username or password!' })
+        res.status(401).send('<script>alert("Wrong username or password!"); window.location.href = "/login"; </script>')
     }
 }
 
