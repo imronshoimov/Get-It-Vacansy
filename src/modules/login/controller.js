@@ -8,6 +8,7 @@ const GET = (req, res) => {
 const POST = async (req, res) => {
     let user = await model.validate(req.body)
     if(user) {
+        res.cookie('userId', user.user_id)
         res.cookie('token', sign(user), { maxAge: 50000000 })
             .redirect('/')
     } else {
