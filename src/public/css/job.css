@@ -104,6 +104,10 @@ body {
     transition: background .3s;
 }
 
+.radio span {
+    display: flex;
+}
+
 .main .container form button:hover {
     background-color: var(--hover-color);
 }
