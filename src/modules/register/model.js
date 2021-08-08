@@ -7,13 +7,15 @@ INSERT INTO users (
     user_username,
     email,
     user_password
-) VALUES ($1, $2, $3, crypt($4, gen_salt('bf')), $5);
+) VALUES 
+($1, $2, $3, $4, crypt($5, gen_salt('bf')))
+RETURNING *;
 `
 
-const insertUser = async (userData) => {
-    const { firstName, LastName, userName, email, password } = userData
-    let user = await fetch(USER, firstName, LastName, userName, email, password )
-    return user
+const user = async ({ firstName, LastName, userName, email, password  }) => {
+    let newUser = await fetch(USER, firstName, LastName, userName, email, password)
+    console.log(newUser);
+    return newUser
 }
 
-module.exports = { insertUser }
+module.exports = { user }
