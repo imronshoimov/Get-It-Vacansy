@@ -11,7 +11,7 @@ const GET_RECRUITE = (req, res) => {
 const POST_RECRUITE = async (req, res) => {
     let data = await model.insertRecruiter(req.body, req.cookies.userId);
     if(data) {
-        res.status(200).redirect('/')
+        res.status(200).redirect('/list/recruite')
     } else {
         res.status(400)
     }
@@ -24,7 +24,7 @@ const GET_JOB = (req, res) => {
 const POST_JOB = async (req, res) => {
     let data = await model.insertStaff(req.body, req.cookies.userId);
     if(data) {
-        res.status(200).redirect('/')
+        res.status(200).redirect('/list/job')
     } else {
         res.status(400)
     } 
