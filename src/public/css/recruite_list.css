@@ -42,3 +42,28 @@ body {
 .login, .register {
     display: none;
 }
+
+.main .container {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 0;
+}
+
+.main .container h1, .main .container p {
+    align-self: center;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.list li {
+    margin: 20px 30px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 28%;
+}
