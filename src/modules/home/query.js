@@ -32,10 +32,6 @@ INSERT INTO staff (
 RETURNING *;
 `
 
-const GET_STAFFS = `
-
-`
-
 module.exports = {
     COMPANY,
     STAFF

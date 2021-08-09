@@ -16,142 +16,23 @@
             <p>The appropriate staffs for your company</p>
 
             <ul class="list">
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                <li>
-                    <p>Company name</p>
-                    <p>Specialization</p>
-                    <p>Technology</p>
-                    <p>Experience</p>
-                    <p>Salary</p>
-                    <p>Type of work</p>
-                    <a href="tel:+">998974409931</a>
-                </li>
-                
+                <% for(let staff in staffs) { %>
+                    <li>
+                        <p>name: <%= staffs[staff].staff_full_name %></p>
+                        <p>specialization: <%= staffs[staff].specialization %></p>
+                        <p>technology: <%= staffs[staff].technology %></p>
+                        <p>experience: <%= staffs[staff].experience %></p>
+                        <p>qualification: <%= staffs[staff].qualification %></p>
+                        <p>salary: <%= staffs[staff].salary %></p>
+                        <p>type of work: <%= staffs[staff].type_work %></p>
+                        <p>location: <%= staffs[staff].location %></p>
+                        <p>age: <%= staffs[staff].age %></p>
+                        <p>gender: <%= staffs[staff].gender %></p>
+                        <p>
+                            number: <a href="tel:+"><%= staffs[staff].number %></a>
+                        </p>
+                    </li>
+                <% } %>
             </ul>
         </div>
     </main>

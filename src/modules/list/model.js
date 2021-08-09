@@ -1,4 +1,5 @@
 const { fetch, fetchAll } = require('../../lib/postgres')
+const { GET_STAFFS } = require('./query')
 
 const USER = `
 INSERT INTO users (
@@ -17,4 +18,10 @@ const user = async ({ firstName, LastName, userName, email, password  }) => {
     return newUser
 }
 
-module.exports = { user }
+const staffs = async () => {
+    let staff = await fetchAll(GET_STAFFS)
+    console.log(staff);
+    return staff
+}
+
+module.exports = { user, staffs }

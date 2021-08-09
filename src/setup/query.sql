@@ -30,7 +30,7 @@ SELECT
     s.gender,
     s.number
 FROM staff s
-LEFT JOIN users u ON u.user_id = 10
-LEFT JOIN company c ON c.user_id = u.user_id
+LEFT JOIN users u ON u.user_id = s.user_id
+LEFT JOIN company c ON c.user_id = s.user_id
 WHERE s.specialization ILIKE c.specialization;
 

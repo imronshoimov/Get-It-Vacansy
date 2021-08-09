@@ -5,7 +5,7 @@ const GET = (req, res) => {
 }
 
 const GET_RECRUITE = async (req, res) => {
-    res.render('recruite.html', await model.staffs())
+    res.render('recruite.html')
 }
 
 const POST_RECRUITE = async (req, res) => {

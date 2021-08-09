@@ -1,7 +1,7 @@
 const model = require('./model')
 
-const RECRUITE_LIST = (req, res) => {
-    res.render('recruite_list.html')
+const RECRUITE_LIST = async (req, res) => {
+    res.render('recruite_list.html', { staffs: await model.staffs() })
 }
 
 const JOB_LIST = (req, res) => {
