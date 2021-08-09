@@ -12,7 +12,26 @@
 
     <main class="main">
         <div class="container">
-            
+            <h1>Companies</h1>
+            <p>The appropriate companies for you!</p>
+
+            <ul class="list">
+                <% for(let recruite in recruites) { %>
+                    <li>
+                        <p>name: <%= recruites[recruite].recruiter_full_name %></p>
+                        <p>name: <%= recruites[recruite].company_name %></p>
+                        <p>specialization: <%= recruites[recruite].specialization %></p>
+                        <p>technology: <%= recruites[recruite].technology %></p>
+                        <p>experience: <%= recruites[recruite].experience %></p>
+                        <p>salary: <%= recruites[recruite].salary %></p>
+                        <p>type of work: <%= recruites[recruite].type_work %></p>
+                        <p>location: <%= recruites[recruite].location %></p>
+                        <p>
+                            number: <a href="tel:+"><%= recruites[recruite].number %></a>
+                        </p>
+                    </li>
+                <% } %>
+            </ul>
         </div>
     </main>
 </body>

@@ -1,17 +1,5 @@
 const { fetch, fetchAll } = require('../../lib/postgres')
-const { GET_STAFFS } = require('./query')
-
-const USER = `
-INSERT INTO users (
-    user_first_name,
-    user_last_name,
-    user_username,
-    email,
-    user_password
-) VALUES 
-($1, $2, $3, $4, crypt($5, gen_salt('bf')))
-RETURNING *;
-`
+const { USER, GET_STAFFS, GET_RECRUITES } = require('./query')
 
 const user = async ({ firstName, LastName, userName, email, password  }) => {
     let newUser = await fetch(USER, firstName, LastName, userName, email, password)
@@ -20,8 +8,12 @@ const user = async ({ firstName, LastName, userName, email, password  }) => {
 
 const staffs = async () => {
     let staff = await fetchAll(GET_STAFFS)
-    console.log(staff);
     return staff
 }
 
-module.exports = { user, staffs }
+const recruites = async () => {
+    let recruite = await fetchAll(GET_RECRUITES)
+    return recruite
+}
+
+module.exports = { user, staffs, recruites }
