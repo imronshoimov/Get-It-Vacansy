@@ -4,8 +4,8 @@ const GET = (req, res) => {
     res.render('home.html')
 }
 
-const GET_RECRUITE = (req, res) => {
-    res.render('recruite.html')
+const GET_RECRUITE = async (req, res) => {
+    res.render('recruite.html', await model.staffs())
 }
 
 const POST_RECRUITE = async (req, res) => {

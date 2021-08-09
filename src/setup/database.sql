@@ -26,7 +26,7 @@ CREATE TABLE company (
     company_id serial primary key,
     user_id int not null references users(user_id),
     company_name varchar(156) not null,
-    specialization varchar(32) not null,
+    specialization varchar(32) not null primary key,
     technology text not null,
     experience varchar(32) not null,
     salary varchar(156) not null,

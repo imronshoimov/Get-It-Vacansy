@@ -20,8 +20,13 @@ const insertStaff = async (data, userId) => {
     return staff
 }
 
+const staffs = async () => {
+    let staff = await fetchAll()
+}
+
 module.exports = {
     insertRecruiter,
-    insertStaff
+    insertStaff,
+    staffs
 }
     
