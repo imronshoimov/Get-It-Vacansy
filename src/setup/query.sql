@@ -14,8 +14,8 @@ SELECT
     c.number
 FROM company c
 LEFT JOIN users u ON u.user_id = c.user_id
-LEFT JOIN staff s ON s.user_id = u.user_id
-WHERE c.specialization ILIKE s.specialization;
+LEFT JOIN stuff_company sc ON sc.company_id = c.company_id
+WHERE c.specialization = 'back';
 
 SELECT 
     u.user_first_name || ' ' || u.user_last_name AS staff_full_name,
@@ -31,6 +31,6 @@ SELECT
     s.number
 FROM staff s
 LEFT JOIN users u ON u.user_id = s.user_id
-LEFT JOIN company c ON c.user_id = s.user_id
-WHERE s.specialization ILIKE c.specialization;
+LEFT JOIN stuff_company sc ON sc.staff_id = s.staff_id
+WHERE s.specialization = 'back';
 
