@@ -10,6 +10,23 @@ INSERT INTO users (
 RETURNING *;
 `
 
+const GET_RECRUITES = `
+SELECT 
+    u.user_first_name || ' ' || u.user_last_name AS recruiter_full_name,
+    c.company_name,
+    c.specialization,
+    c.technology,
+    c.experience,
+    c.salary,
+    c.type_work,
+    c.location,
+    c.number
+FROM company c
+LEFT JOIN users u ON u.user_id = c.user_id
+LEFT JOIN stuff_company sc ON sc.company_id = c.company_id
+WHERE c.specialization = $1;
+`
+
 const GET_STAFFS = `
 SELECT 
     u.user_first_name || ' ' || u.user_last_name AS staff_full_name,
@@ -25,25 +42,8 @@ SELECT
     s.number
 FROM staff s
 LEFT JOIN users u ON u.user_id = s.user_id
-LEFT JOIN company c ON c.user_id = s.user_id
-WHERE s.specialization ILIKE c.specialization;
-`
-
-const GET_RECRUITES = `
-SELECT 
-    u.user_first_name || ' ' || u.user_last_name AS recruiter_full_name,
-    c.company_name,
-    c.specialization,
-    c.technology,
-    c.experience,
-    c.salary,
-    c.type_work,
-    c.location,
-    c.number
-FROM company c
-LEFT JOIN users u ON u.user_id = c.user_id
-LEFT JOIN staff s ON s.user_id = u.user_id
-WHERE c.specialization ILIKE s.specialization;
+LEFT JOIN stuff_company sc ON sc.staff_id = s.staff_id
+WHERE s.specialization = $1;
 `
 
 module.exports = { USER, GET_STAFFS, GET_RECRUITES }

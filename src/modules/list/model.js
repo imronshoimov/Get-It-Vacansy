@@ -6,13 +6,13 @@ const user = async ({ firstName, LastName, userName, email, password  }) => {
     return newUser
 }
 
-const staffs = async () => {
-    let staff = await fetchAll(GET_STAFFS)
+const staffs = async (spec) => {
+    let staff = await fetchAll(GET_STAFFS, spec)
     return staff
 }
 
-const recruites = async () => {
-    let recruite = await fetchAll(GET_RECRUITES)
+const recruites = async (spec) => {
+    let recruite = await fetchAll(GET_RECRUITES, spec)
     return recruite
 }
 
