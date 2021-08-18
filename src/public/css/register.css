@@ -14,7 +14,7 @@ a {
 }
 
 body {
-    background-color: var(--bg-color);
+    background-image: url(/images/back.webp);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
