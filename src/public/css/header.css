@@ -1,6 +1,9 @@
 :root {
     --bg-color: #00BAFC;
     --hover-color: #0381af;
+    --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-primary-8: hsl(205, 86%, 81%);
+    --clr-primary-5: hsl(205, 78%, 60%);    
 }
 
 .nav {
@@ -25,14 +28,13 @@
 }
 
 .nav-item .nav-link, .login {
-    color: var(--bg-color);
+    color: var(--clr-grey-3);
     font-size: 20px;
     transition: .5s;
 }
 
 .nav-item .nav-link:hover, .login:hover {
-    text-decoration: underline;
-    color: var(--hover-color);
+    color: var(--clr-primary-5);
 }
 
 .register {
