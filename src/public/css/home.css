@@ -136,9 +136,9 @@ body {
     margin: 0 auto;
 }
 
-/* .nav-link {
-    display: none;
-} */
+.nav-link {
+    transition: var(--transition);
+}
 
 .main .container {
     margin: 80px auto;
