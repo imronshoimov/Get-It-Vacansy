@@ -12,7 +12,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <%- include('header.html', { links: [ 'About', 'Q&A', 'Contact' ]}) %>
+    
+    <header>
+        <%- include('header.html', { links: [ 'About', 'Questions', 'Contact' ]}) %>
+        
+        <section class="hero">
+            <div class="hero-center">
+                <article class="hero-info">
+                    <h1>
+                        Payments infrastructure <br />
+                        for the internet
+                    </h1>
+                    <p>
+                        Millions of companies of all sizes—from startups to Fortune 500s—use
+                        Stripe’s software and APIs to accept payments, send payouts, and
+                        manage their businesses online.
+                    </p>
+                    <a href="/register" class="btn">Start now</a>
+                </article>
+                <article class="hero-images">
+                    <img src="./images/phone.svg" class="phone-img" alt="" />
+                </article>
+            </div>
+        </section>
+        <!-- sidebar -->
+        <div class="sidebar-wrapper">
+            <aside class="sidebar">
+                <button class="close-btn">
+                    <i class="fas fa-times"></i>
+                </button>
+                <div class="sidebar-links"></div>
+                <!-- links -->
+            </aside>
+        </div>
+    </header>
     
     <main class="main">
         <div class="container">
@@ -230,7 +263,7 @@
             </article>
             <!-- end of single question -->
             <!-- single question -->
-            <article class="question" id="Q&A">
+            <article class="question" id="Questions">
                 <!-- question title -->
                 <div class="question-title">
                     <p>do you use organic ingredients?</p>
