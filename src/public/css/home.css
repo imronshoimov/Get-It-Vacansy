@@ -115,8 +115,8 @@ p {
 }
 
 body {
-    /* font-family: var(--ff-secondary);    */
-    font-family: "Great Vibes", cursive;
+    font-family: var(--ff-secondary);   
+    /* font-family: "Great Vibes", cursive; */
 }
 
 .visually-hidden {
@@ -399,7 +399,7 @@ Questions
 }
 .title h2 {
     color: var(--clr-gold);
-    font-family: "Great Vibes", cursive;
+    /* font-family: "Great Vibes", cursive; */
     text-align: center;
 }
 .section-center {
