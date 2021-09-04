@@ -2,13 +2,10 @@
     --bg-color: #00BAFC;
     --hover-color: #0381af;
     --clr-grey-3: hsl(209, 34%, 30%);
+    --clr-grey-5: hsl(210, 22%, 49%);
     --clr-primary-8: hsl(205, 86%, 81%);
     --clr-primary-5: hsl(205, 78%, 60%);    
-}
-
-.nav {
-    /* box-shadow: 0 0 10px rgba(0,0,0,0.5); */
-    /* background-color: white; */
+    --clr-grey-6: hsl(209, 23%, 60%);
 }
 
 .nav .container {
@@ -35,7 +32,7 @@
 }
 
 .nav-item .nav-link:hover, .login:hover {
-    color: var(--clr-primary-5);
+    color: var(--clr-grey-6);
 }
 
 .register {
