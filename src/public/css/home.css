@@ -365,7 +365,7 @@ About
     letter-spacing: var(--spacing);
 }
 .tab-btn:hover:not(.active) {
-    background: var(--clr-primary-10);
+    background-color: var(--clr-grey-3);
     color: var(--clr-primary-5);
 }
 .about-content {
@@ -382,7 +382,7 @@ About
     /* font-size: 18px; */
 }
 .tab-btn.active {
-    background: var(--clr-white);
+    background: var(--clr-grey-3);
 }
 .content.active {
     display: block;
@@ -523,8 +523,8 @@ Questions
     letter-spacing: var(--spacing);
 }
 .tab-btn:hover:not(.active) {
-    background: var(--clr-primary-10);
-    color: var(--clr-primary-5);
+    background: var(--clr-grey-3);
+    color: white;
 }
 .about-content {
     border-bottom-left-radius: var(--radius);
@@ -832,7 +832,7 @@ footer p {
 }
 .col-2 {
     grid-template-columns: repeat(2, 1fr);
-}
+}   
 .col-3 {
     grid-template-columns: repeat(3, 1fr);
 }
