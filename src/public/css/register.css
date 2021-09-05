@@ -131,7 +131,7 @@ body {
 .header-logo {
     padding: 20px;
     margin-right: auto;
-    }
+}
 
 .header-content {
     height: 100%;
@@ -239,4 +239,17 @@ body {
     margin-bottom: 0;
     transition: color 0.3s;
     padding: 20px;
+}
+
+.image-upload {
+    width: 20%;
+}
+
+.image-upload>input {
+    display: none;
+}
+
+.file-avatar {
+    width: 100%;
+    /* height: 20px; */
 }

@@ -24,11 +24,20 @@
                 <button type="submit">Sign in</button>
             </form> -->
             <form id="form" action="/register" method="POST">
-                <input type="text" name="firstName" id="firstName" placeholder="First name" required>
-                <input type="text" name="LastName" id="LastName" placeholder="Last name" required>
+                <label>
+                    <input type="text" name="firstName" id="firstName" placeholder="First name" required>
+                    <input type="text" name="LastName" id="LastName" placeholder="Last name" required>
+                </label>
                 <input type="text" name="userName" id="userName" placeholder="Username" required>
                 <input type="email" name="email" id="email" placeholder="Email" required>
                 <input type="password" name="password" id="password" placeholder="Password" required>
+                <div class="image-upload">
+                    <label for="file-input">
+                        <img class="file-avatar" src="/images/user.png"/>
+                    </label>
+                    
+                    <input id="file-input" type="file" />
+                </div>
                 <button type="submit">Sign up</button>
             </form>
         </div>
