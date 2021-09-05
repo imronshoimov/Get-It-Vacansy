@@ -242,14 +242,21 @@ body {
 }
 
 .image-upload {
-    width: 20%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .image-upload>input {
     display: none;
 }
 
-.file-avatar {
-    width: 100%;
-    /* height: 20px; */
+.file-input {
+    width: 10%;
+}
+
+.image-upload {
+    font-size: 20px;
 }
