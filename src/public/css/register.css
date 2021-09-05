@@ -139,7 +139,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateY(-10%);
+    transform: translateY(-5%);
 }
 
 .header-title {
