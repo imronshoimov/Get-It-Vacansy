@@ -126,20 +126,20 @@ body {
 .register-header {
     background: var(--clr-grey-10);
     width: 550px;
-    padding: 30px;
 }
 
 .header-logo {
-    height: 30%;
-}
+    padding: 20px;
+    margin-right: auto;
+    }
 
 .header-content {
-    height: calc(100% - 30%);
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transform: translateY(-30%);
+    transform: translateY(-10%);
 }
 
 .header-title {
@@ -149,7 +149,7 @@ body {
 .header-text {
     text-align: center;
     font-size: 19px;
-    width: 50%;
+    width: 70%;
     padding: 20px 0;
     line-height: 1.7;
 }   
@@ -178,7 +178,6 @@ body {
     width: calc(100% - 550px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
