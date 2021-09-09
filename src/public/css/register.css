@@ -194,6 +194,31 @@ body {
     width: 50%;
 }
 
+.switch-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--clr-grey-3);
+    margin: 0 auto;
+    border-radius: 40px;
+}
+
+.recruiter, .employee {
+    font-size: 21px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.checked {
+    background-color: var(--clr-grey-3);
+    border-radius: 50px;
+}
+
+.checked p {
+    color: white;
+}
+
 #form input, #form a {
     margin: 10px 0;     
     padding: 15px 20px; 
@@ -206,6 +231,7 @@ body {
     font-size: 20px;
     background: var(--clr-grey-10);
     margin: 20px;
+    color: var(--clr-grey-3);
 }
 
 #form button {
