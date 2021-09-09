@@ -249,7 +249,7 @@ body {
     align-items: center;
 }
 
-.image-upload>input {
+.image-upload > input {
     display: none;
 }
 
@@ -259,4 +259,8 @@ body {
 
 .image-upload {
     font-size: 22px;
+}
+
+.switch {
+    display: none;
 }

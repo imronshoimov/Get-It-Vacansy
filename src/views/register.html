@@ -24,14 +24,25 @@
                 <button type="submit">Sign in</button>
             </form> -->
             <form id="form" action="/register" method="POST">
-                <label class="image-upload">
+                <!-- <label class="image-upload">
                     <div class="file-input">
                         <img class="file-avatar" src="/images/user.jpg"/>
                     </div>
                     
                     <input id="file-input" type="file" />
                     <p>Click on man to choose your profile image</p>
-                </label>
+                </label> -->
+                <div class="switch-button">
+                    <input id="switchRecriuter" class="switch" type="radio" name="switch" value="recruiter">
+                    <input id="switchEmployee" class="switch" type="radio" name="switch" value="emplyee">
+
+                    <label class="label-recruiter" for="#switchRecriuter">
+                        <p>recruiter</p>
+                    </label>
+                    <label class="label-employee" for="#switchEmployee">
+                        <p>employee</p>
+                    </label>
+                </div>
                 <label>
                     <input type="text" name="firstName" id="firstName" placeholder="First name" required>
                     <input type="text" name="LastName" id="LastName" placeholder="Last name" required>
@@ -55,7 +66,7 @@
         </header>
     </section>
     
-
+    
     <script src="/js/register.js"></script>
 </body>
 </html>
