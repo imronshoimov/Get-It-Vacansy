@@ -1,32 +1,36 @@
 <link rel="stylesheet" href="/css/header.css">
 <nav class="nav">
-    <div class="container">
-        <a class="logo-link" href="/">
-            <img class="logo-image" src="/images/logo.png" alt="logo">
-        </a>
-        <ul class="nav-list">
+    <a class="logo-link" href="/">
+        <img class="logo-image" src="/images/logo.png" alt="logo">
+    </a>
+    <ul class="nav-list">
+        <% for(let link of links) { %> 
             <li class="nav-item">
-                <a href="/" class="nav-link">Home</a>
+                <a class="nav-link" href="#<%= link %>"><%= link %></a>
             </li>
-            <% for(let link of links) { %> 
-                <li class="nav-item">
-                    <a class="nav-link" href="#<%= link %>"><%= link %></a>
-                </li>
-                <% } %> 
-            </ul>
-            <ul class="nav-list">
-                <!-- <li class="nav-item">
-                    <a class="login" href="/list/recruite">find staff</a>
-                </li>
-                <li class="nav-item">
-                    <a class="login" href="/list/job">apply job</a>
-                </li> -->
-                <li class="nav-item">
-                    <a class="login" href="/login">Log in</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/register" class="btn">Sign up</a>
-                </li>
-            </ul>
+            <% } %> 
+        </ul>
+        <div class="info">
+            <div class="notification">
+                <img src="/images/notification.png" alt="notification">
+            </div>
+            <div class="user">
+                <img src="/images/user.jpg" alt="user">
+            </div>
         </div>
+        <!-- <ul class="nav-list">
+            <li class="nav-item">
+                <a class="login" href="/list/recruite">find staff</a>
+            </li>
+            <li class="nav-item">
+                <a class="login" href="/list/job">apply job</a>
+            </li>
+            <li class="nav-item">
+                <a class="login" href="/login">Log in</a>
+            </li>
+            <li class="nav-item">
+                <a href="/register" class="btn">Sign up</a>
+            </li>
+        </ul> -->
     </nav>
+</nav>

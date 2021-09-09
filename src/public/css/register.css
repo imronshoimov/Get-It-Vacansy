@@ -271,22 +271,3 @@ body {
     padding: 20px;
 }
 
-.image-upload {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.image-upload > input {
-    display: none;
-}
-
-.file-input {
-    width: 15%;
-}
-
-.image-upload {
-    font-size: 22px;
-}
