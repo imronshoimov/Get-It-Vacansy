@@ -29,6 +29,17 @@
         <div class="login-form">
             <h1 class="login-title">Sign in to GIV</h1>
             <form id="form" action="/login" method="POST">
+                <div class="switch-button">
+                    <input id="switchRecriuter" class="switch" type="radio" name="switch" value="recruiter" checked>
+                    <input id="switchEmployee" class="switch" type="radio" name="switch" value="emplyee">
+
+                    <label class="label-recruiter recruiter checked" for="#switchRecriuter">
+                        <p>recruiter</p>
+                    </label>
+                    <label class="label-employee employee" for="#switchEmployee">
+                        <p>employee</p>
+                    </label>
+                </div>
                 <input type="text" name="userName" id="userName" placeholder="Username" required >
                 <input type="password" name="password" id="password" placeholder="Password" required>
                 <a href="">Forgot your password?</a>
@@ -37,5 +48,6 @@
         </div>
     </section>
     
+    <script src="/js/login.js"></script>
 </body>
 </html>

@@ -219,6 +219,10 @@ body {
     color: white;
 }
 
+.switch {
+    display: none;
+}
+
 #form input, #form a {
     margin: 10px 0;     
     padding: 15px 20px; 
@@ -285,8 +289,4 @@ body {
 
 .image-upload {
     font-size: 22px;
-}
-
-.switch {
-    display: none;
 }
