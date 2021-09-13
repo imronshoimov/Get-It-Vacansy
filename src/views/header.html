@@ -8,29 +8,38 @@
             <li class="nav-item">
                 <a class="nav-link" href="#<%= link %>"><%= link %></a>
             </li>
-            <% } %> 
+        <% } %> 
         </ul>
-        <div class="info">
+        <!-- <div class="info">
             <div class="notification">
                 <img src="/images/notification.png" alt="notification">
             </div>
             <div class="user">
                 <img src="/images/user.jpg" alt="user">
             </div>
-        </div>
-        <!-- <ul class="nav-list">
-            <li class="nav-item">
+        </div> -->
+        <ul class="nav-list">
+            <% for(let link of auth) { %> 
+                <li class="nav-item">
+                    <% if(link == "register") { %>
+                        <a class="btn" href="<%= link %>">sign up</a>
+                    <% } else { %>
+                        <a class="nav-link" href="<%= link %>">sign in</a>
+                    <% } %>
+                </li>
+            <% } %> 
+            <!-- <li class="nav-item">
                 <a class="login" href="/list/recruite">find staff</a>
             </li>
             <li class="nav-item">
                 <a class="login" href="/list/job">apply job</a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
                 <a class="login" href="/login">Log in</a>
             </li>
             <li class="nav-item">
                 <a href="/register" class="btn">Sign up</a>
-            </li>
-        </ul> -->
+            </li> -->
+        </ul>
     </nav>
 </nav>
