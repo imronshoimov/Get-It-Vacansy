@@ -40,6 +40,10 @@ body {
     margin: 0 auto;
 }
 
+/* .nav-list {
+    display: none;
+} */
+
 .main .container {
     display: flex;
     flex-direction: column;
