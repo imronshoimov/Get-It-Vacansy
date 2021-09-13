@@ -10,7 +10,9 @@
                     <a class="btn" href="<%= link %>">sign up</a>
                 <% } else if(link == "login") { %>
                     <a class="nav-link" href="<%= link %>">sign in</a>
-                <% } else { %>
+                <% } else if(link == "logout") { %>
+                    <a class="nav-link" href="<%= link %>">log out</a>
+                <% } else { %> 
                     <a class="nav-link" href="#<%= link %>"><%= link %></a>        
                 <% } %>
             </li>

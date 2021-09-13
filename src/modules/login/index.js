@@ -5,7 +5,7 @@ router.route('/login')
     .get(GET)
     .post(POST)
 
-router.route('/logout')
+router.route('/home/logout')
 	.get( LOGOUT )
 
 module.exports = router
