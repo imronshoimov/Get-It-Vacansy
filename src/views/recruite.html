@@ -9,81 +9,86 @@
 </head>
 <body>
     <%- include('header.html', { links: ['logout'] }) %>
+    
+    <section class="main">
+        <div class="container">
+            <form id="recruite" action="/home/recruite" method="POST">
+                <label class="image-upload">
+                    <div class="file-input">
+                        <img class="file-avatar" src="/images/user.jpg"/>
+                    </div>
+                    
+                    <input id="file-input" type="file" />
+                    <p>Click on man to choose your profile image</p>
+                </label>
+                <label>
+                    <p>Company name</p>
+                    <input type="text" name="companyName" id="companyName" required placeholder="Company name">
+                </label>
+                <label>
+                    <p>Specialization</p>
+                    <select name="specialization" id="specialization">
+                        <option value="frontend">frontend dasturlash</option>
+                        <option value="backend">backend dasturlash</option>
+                        <option value="mobile">android/IOS developer</option>
+                    </select>
+                </label>
+                <label>
+                    <p>Technology</p>
+                    <input type="text" name="technology" id="technology" required placeholder="Technology">
+                </label>
+                <label>
+                    <p>Experience</p>
+                    <select name="experience" id="experience">
+                        <option value="1-yil">1 - yil</option>
+                        <option value="1-yil">2 - yil</option>
+                        <option value="1-yil">3 - yil</option>
+                        <option value="1-yil">4 - yil</option>
+                        <option value="1-yil">5 - yil</option>
+                        <option value="1-yil">6 - yildan ko'p</option>
+                    </select>
+                </label>
+                <label>
+                    <p>Salary</p>
+                    <input type="text" name="salary" id="salary" required placeholder="salary">
+                </label>
+                <label>
+                    <p>Type of work</p>
+                    <select name="TypeOfWork" id="typeOfWork">
+                        <option value="doimiy">doimiy</option>
+                        <option value="vaqtincha">vaqtincha</option>
+                        <option value="amaliyot">amaliyot</option>
+                    </select>
+                </label>
+                <label>
+                    <p>Location</p>
+                    <select name="location" id="location">
+                        <option value="Andijan">Andijon</option>
+                        <option value="Bukhara">Buxoro</option>
+                        <option value="Djizzak">Jizzax</option>
+                        <option value="Fergana">Farg'ona</option>
+                        <option value="Kashkadarya">Qashqadaryo</option>
+                        <option value="Khorezm">Xorazm</option>
+                        <option value="Namangan">Namangan</option>
+                        <option value="Navoi">Navoi</option>
+                        <option value="Samarkand">Samarqand</option>
+                        <option value="Surkhandarya">Surxondaryo</option>
+                        <option value="Tashkent">Toshkent</option>
+                        <option value="Republic of Karakalpakistan">Qoraqalpog'iston Respublikasi</option>
+                    </select>
+                </label>
+                <label>
+                    <p>Contact</p>
+                    <input type="number" name="number" id="number" required placeholder="Contact" min="12">
+                </label>
+                <label>
+                    <button type="submit">Submit</button>
+                </label>
+            </form>
+        </div>
+    </section>
+    
+    <%- include("footer.html") %>
 </body>
 </html>
 
-
-<!-- <form id="recruite" action="/home/recruite" method="POST">
-    <label class="image-upload">
-        <div class="file-input">
-            <img class="file-avatar" src="/images/user.jpg"/>
-        </div>
-        
-        <input id="file-input" type="file" />
-        <p>Click on man to choose your profile image</p>
-    </label>
-    <label>
-        <p>Company name</p>
-        <input type="text" name="companyName" id="companyName" required placeholder="Company name">
-    </label>
-    <label>
-        <p>Specialization</p>
-        <input type="text" name="specialization" id="specialization" required placeholder="Specialization"> -->
-        <!-- <select name="specialization" id="specialization">
-            <option value="frontend">frontend dasturlash</option>
-            <option value="backend">backend dasturlash</option>
-            <option value="mobile">android/IOS developer</option>
-        </select> -->
-   <!-- </label>
-    <label>
-        <p>Technology</p>
-        <input type="text" name="technology" id="technology" required placeholder="Technology">
-    </label>
-    <label>
-        <p>Experience</p>
-        <select name="experience" id="experience">
-            <option value="1-yil">1 - yil</option>
-            <option value="1-yil">2 - yil</option>
-            <option value="1-yil">3 - yil</option>
-            <option value="1-yil">4 - yil</option>
-            <option value="1-yil">5 - yil</option>
-            <option value="1-yil">6 - yildan ko'p</option>
-        </select>
-    </label>
-    <label>
-        <p>Salary</p>
-        <input type="text" name="salary" id="salary" required placeholder="salary">
-    </label>
-    <label>
-        <p>Type of work</p>
-        <select name="TypeOfWork" id="typeOfWork">
-            <option value="doimiy">doimiy</option>
-            <option value="vaqtincha">vaqtincha</option>
-            <option value="amaliyot">amaliyot</option>
-        </select>
-    </label>
-    <label>
-        <p>Location</p>
-        <select name="location" id="location">
-            <option value="Andijan">Andijon</option>
-            <option value="Bukhara">Buxoro</option>
-            <option value="Djizzak">Jizzax</option>
-            <option value="Fergana">Farg'ona</option>
-            <option value="Kashkadarya">Qashqadaryo</option>
-            <option value="Khorezm">Xorazm</option>
-            <option value="Namangan">Namangan</option>
-            <option value="Navoi">Navoi</option>
-            <option value="Samarkand">Samarqand</option>
-            <option value="Surkhandarya">Surxondaryo</option>
-            <option value="Tashkent">Toshkent</option>
-            <option value="Republic of Karakalpakistan">Qoraqalpog'iston Respublikasi</option>
-        </select>
-    </label>
-    <label>
-        <p>Contact</p>
-        <input type="number" name="number" id="number" required placeholder="Contact" min="12">
-    </label>
-    <label>
-        <button type="submit">Submit</button>
-    </label>
-</form> -->
